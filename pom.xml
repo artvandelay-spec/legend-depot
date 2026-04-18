@@ -95,8 +95,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-        <maven.compiler>11</maven.compiler>
-        <java.version.range>[11,12),[17,18)</java.version.range>
+        <maven.compiler>21</maven.compiler>
+        <java.version.range>[21,22)</java.version.range>
         <publish.server.id>central</publish.server.id>
 
         <!-- Legend dependency versions -->

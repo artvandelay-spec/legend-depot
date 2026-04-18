@@ -42,7 +42,7 @@ jobs:
         # NOTE: if this gets more complicated, consider having this as a bash script
         run: mkdir -p ./${{ matrix.module }}/target && touch ./${{ matrix.module }}/target/${{ matrix.module }}-dummy.jar && docker build --quiet --tag local/${{ matrix.module }}:${{ github.sha }} ./${{ matrix.module }}
       - name: Scan image for security issues
-        uses: aquasecurity/trivy-action@915b19bbe73b92a6cf82a1bc12b087c9a19a5fe2 # v0.28.0
+        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1 # v0.35.0
         with:
           # TODO: we should probably also setup misconfiguration scanning
           # See https://github.com/aquasecurity/trivy-action#using-trivy-to-scan-infrastucture-as-code

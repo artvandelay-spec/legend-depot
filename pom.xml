@@ -95,8 +95,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-        <maven.compiler>11</maven.compiler>
-        <java.version.range>[11,12),[17,18)</java.version.range>
+        <maven.compiler>21</maven.compiler>
+        <java.version.range>[21,22)</java.version.range>
         <publish.server.id>central</publish.server.id>
 
         <!-- Legend dependency versions -->
@@ -123,9 +123,9 @@
         <guice.version>4.2.1</guice.version>
         <hk2.version>2.5.0-b32</hk2.version>
         <hibernate.validator.version>5.4.2.Final</hibernate.validator.version>
-        <jackson.version>2.10.5</jackson.version>
-        <jackson.databind.version>2.10.5.1</jackson.databind.version>
-        <javassist.version>3.21.0-GA</javassist.version>
+        <jackson.version>2.17.0</jackson.version>
+        <jackson.databind.version>2.17.0</jackson.databind.version>
+        <javassist.version>3.30.2-GA</javassist.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <javax.ws.rs.version>2.1.1</javax.ws.rs.version>
         <jaxb.version>2.3.1</jaxb.version>
@@ -140,7 +140,7 @@
         <junit.artifactId>junit-jupiter-engine</junit.artifactId>
         <junit5-version>5.9.3</junit5-version>
 
-        <mockito.version>3.9.0</mockito.version>
+        <mockito.version>5.11.0</mockito.version>
         <slf4j.version>1.7.36</slf4j.version>
 
         <apache.maven.version>3.9.12</apache.maven.version>
@@ -162,12 +162,12 @@
 
         <validation-api.version>1.1.0.Final</validation-api.version>
 
-        <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
         <maven.clean.plugin.version>3.1.0</maven.clean.plugin.version>
         <maven.checkstyle.plugin.version>3.1.2</maven.checkstyle.plugin.version>
-        <maven.surefire.plugin.version>3.0.0-M3</maven.surefire.plugin.version>
+        <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
         <maven.dependency.plugin.version>2.10</maven.dependency.plugin.version>
-        <maven.shade.plugin.version>3.2.1</maven.shade.plugin.version>
+        <maven.shade.plugin.version>3.5.3</maven.shade.plugin.version>
         <maven.plugin.plugin.version>3.6.0</maven.plugin.plugin.version>
         <maven.enforcer.plugin.version>3.0.0-M1</maven.enforcer.plugin.version>
         <maven.jar.plugin.version>3.1.2</maven.jar.plugin.version>
@@ -461,6 +461,15 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- JACKSON BOM (unify all jackson component versions) -->
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <!-- DEPOT -->
 
@@ -1163,6 +1172,26 @@
                 <version>${jaxb.version}</version>
             </dependency>
             <dependency>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
+                <version>2.3.3</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.activation</groupId>
+                <artifactId>jakarta.activation-api</artifactId>
+                <version>1.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>1.14.12</version>
+            </dependency>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy-agent</artifactId>
+                <version>1.14.12</version>
+            </dependency>
+            <dependency>
                 <groupId>org.webjars.npm</groupId>
                 <artifactId>swagger-ui-dist</artifactId>
                 <version>${swagger-ui-dist.version}</version>
@@ -1189,7 +1218,7 @@
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
-                <artifactId>jackson-module-afterburner</artifactId>
+                <artifactId>jackson-module-blackbird</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
             <dependency>

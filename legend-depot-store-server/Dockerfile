@@ -20,4 +20,12 @@ CMD java -cp /config:/app/bin/* \
 -XX:MaxRAMPercentage=60 \
 -Xss4M \
 -Dfile.encoding=UTF8 \
+--add-opens java.base/java.lang=ALL-UNNAMED \
+--add-opens java.base/java.lang.reflect=ALL-UNNAMED \
+--add-opens java.base/java.io=ALL-UNNAMED \
+--add-opens java.base/java.nio=ALL-UNNAMED \
+--add-opens java.base/java.util=ALL-UNNAMED \
+--add-opens java.base/sun.nio.ch=ALL-UNNAMED \
+--add-opens java.base/sun.security.ssl=ALL-UNNAMED \
+--add-opens java.base/sun.misc=ALL-UNNAMED \
 org.finos.legend.depot.store.server.LegendDepotStoreServer server /config/config.json

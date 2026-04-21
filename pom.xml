@@ -95,8 +95,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-        <maven.compiler>11</maven.compiler>
-        <java.version.range>[11,12),[17,18)</java.version.range>
+        <maven.compiler>21</maven.compiler>
+        <java.version.range>[21,22)</java.version.range>
         <publish.server.id>central</publish.server.id>
 
         <!-- Legend dependency versions -->
@@ -162,19 +162,19 @@
 
         <validation-api.version>1.1.0.Final</validation-api.version>
 
-        <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
-        <maven.clean.plugin.version>3.1.0</maven.clean.plugin.version>
-        <maven.checkstyle.plugin.version>3.1.2</maven.checkstyle.plugin.version>
-        <maven.surefire.plugin.version>3.0.0-M3</maven.surefire.plugin.version>
-        <maven.dependency.plugin.version>2.10</maven.dependency.plugin.version>
-        <maven.shade.plugin.version>3.2.1</maven.shade.plugin.version>
-        <maven.plugin.plugin.version>3.6.0</maven.plugin.plugin.version>
-        <maven.enforcer.plugin.version>3.0.0-M1</maven.enforcer.plugin.version>
-        <maven.jar.plugin.version>3.1.2</maven.jar.plugin.version>
+        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+        <maven.clean.plugin.version>3.3.2</maven.clean.plugin.version>
+        <maven.checkstyle.plugin.version>3.3.1</maven.checkstyle.plugin.version>
+        <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
+        <maven.dependency.plugin.version>3.6.1</maven.dependency.plugin.version>
+        <maven.shade.plugin.version>3.5.2</maven.shade.plugin.version>
+        <maven.plugin.plugin.version>3.11.0</maven.plugin.plugin.version>
+        <maven.enforcer.plugin.version>3.4.1</maven.enforcer.plugin.version>
+        <maven.jar.plugin.version>3.4.1</maven.jar.plugin.version>
 
-        <git.commit.plugin.version>2.2.6</git.commit.plugin.version>
-        <versions.maven.plugin.version>2.7</versions.maven.plugin.version>
-        <jacoco.maven.plugin.version>0.8.10</jacoco.maven.plugin.version>
+        <git.commit.plugin.version>4.9.10</git.commit.plugin.version>
+        <versions.maven.plugin.version>2.16.2</versions.maven.plugin.version>
+        <jacoco.maven.plugin.version>0.8.12</jacoco.maven.plugin.version>
         <sonar.maven.plugin.version>3.7.0.1746</sonar.maven.plugin.version>
         <dockerfile.maven.plugin.version>1.4.13</dockerfile.maven.plugin.version>
     </properties>
